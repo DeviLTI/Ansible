@@ -1,6 +1,18 @@
 - name: variables
-  hosts: frontend
+  hosts: frontend #take inputs from inventory file from frontend group IP
   #connection: local
+  tasks:
+    - name: course info
+      ansible.builtin.debug:
+        msg: "hello i'm learning {{ course }}, duration of {{ duration }}, Trainer is: {{ trainer }}"
+
+
+
+
+
+- name: variables
+  hosts: local # takes input from inventory file local group
+  connection: local
   tasks:
     - name: course info
       ansible.builtin.debug:
