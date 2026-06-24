@@ -1,8 +1,7 @@
 - name: variables
-  hosts: local
-  connection: local
+  hosts: frontend
+  #connection: local
   tasks:
     - name: course info
       ansible.builtin.debug:
         msg: "hello i'm learning {{ course }}, duration of {{ duration }}, Trainer is: {{ trainer }}"
-        
