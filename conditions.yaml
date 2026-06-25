@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    number: 60
+    - promt: please enter a number
   tasks:
     - name: number is lessthan 100
       ansible.builtin.debug:
@@ -12,4 +12,4 @@
       ansible.builtin.debug:
         msg: " the given number {{ number }} is greaterthan 100"
       when: number > 100
-      
+
