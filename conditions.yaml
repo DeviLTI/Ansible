@@ -2,7 +2,10 @@
   hosts: local
   connection: local
   vars:
-    - promt: please enter a number
+    - name: number
+      promt: please enter a number
+      private: false
+      
   tasks:
     - name: number is lessthan 100
       ansible.builtin.debug:
