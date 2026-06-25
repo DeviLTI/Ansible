@@ -1,0 +1,15 @@
+- name: conditions in ansible
+  hosts: local
+  connection: local
+  vars:
+    number: 60
+  tasks:
+    - name: number is lessthan 100
+      ansible.builtin.debug:
+        msg: "the given number {{ number }} is Less than 100"
+      when: number < 100
+    - name: number is greaterthan 100
+      ansible.builtin.debug:
+        msg: " the given number {{ number }} is greaterthan 100"
+      when: number > 100
+      
