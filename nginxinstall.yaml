@@ -1,0 +1,16 @@
+- name: nginx installation
+  hosts: frontend
+  tasks:
+    - name: nginx installation if it is redhat
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+        msg: "install nginx if is redhat"
+      when: ansible_os_family == RedHat
+    
+    - name: nginx installation if it is ubantu
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+        msg: "nginx install if it is ubuntu"
+      when: ansible_os_family == Debian
