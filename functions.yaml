@@ -9,7 +9,7 @@
     
      - name: making variable optional
        ansible.builtin.debug:
-        msg: "{{ person | default('devi') }}"
+        msg: "{{ person1 | default('devi') }}"
         msg: "{{ person | default('omit') }}" #making varible optional
 
     # - name: ipaddress validation
