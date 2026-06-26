@@ -1,5 +1,5 @@
 - name: installinf packages with loop
-  host: frontend
+  hosts: frontend
   become: yes
   tasks:
     - name: installing packages
