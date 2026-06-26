@@ -1,5 +1,6 @@
 - name: nginx installation
   hosts: frontend
+  become: yes
   tasks:
     - name: nginx installation if it is redhat
       ansible.builtin.dnf:
