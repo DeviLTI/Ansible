@@ -7,12 +7,12 @@
     #     msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
 
     
-    #  - name: making variable optional
-    #    ansible.builtin.debug:
-    #     msg: "{{ cat |  default(omit) }}" #making varible optional
-       - name: Check if person is defined
-         ansible.builtin.debug:
-           msg: "{{ person is defined }}"
+      - name: making variable optional
+        ansible.builtin.debug:
+         msg: "{{ cat |  default('omit') }}" #making varible optional
+      #  - name: Check if person is defined
+      #    ansible.builtin.debug:
+      #      msg: "{{ person is defined }}"
     # - name: ipaddress validation
     #   ansible.builtin.debug:
     #     ip: 400.600.659.458
