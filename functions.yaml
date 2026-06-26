@@ -19,7 +19,7 @@
           
         
       - name: ipadrress validation2
-        ansbile.builtin.debug:
+        ansible.builtin.debug:
           ipp: 125.46.8.8
           msg: " The given ip address '{{ ipp }}' is : {{ ipp | ansible.utils.ipaddr }}"
 
