@@ -18,6 +18,6 @@
         state: {{ item.state }}
         msg: " {{ item }} is {{ state }} "
       loop:
-        {name: nginx, state: present}
-        {name: mysql, state: absent}
-        {name: zip, state: absent}
+        - {name: nginx, state: present}
+        - {name: mysql, state: absent}
+        - {name: zip, state: absent}
