@@ -48,4 +48,4 @@
           fruits: [apple,banaana,kiwi,alo]
       
         ansible.builtin.debug:
-          msg: " fruits are : {{ fruits | list2dict }}"
+          msg: " fruits are : {{ fruits | items2dict }}"
