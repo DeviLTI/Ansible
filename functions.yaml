@@ -2,15 +2,15 @@
   hosts: local
   connection: local
   tasks:
-    - name: default variable
-      ansible.builtin.debug:
-        msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
+    # - name: default variable
+    #   ansible.builtin.debug:
+    #     msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
 
     
-    # - name: making variable optional
-    #   ansible.builtin.debug:
-    #     msg: "{{ person | default('devi') }}"
-    #     msg: "{{ person | default('omit') }}" #making varible optional
+     - name: making variable optional
+       ansible.builtin.debug:
+        msg: "{{ person | default('devi') }}"
+        msg: "{{ person | default('omit') }}" #making varible optional
 
     # - name: ipaddress validation
     #   ansible.builtin.debug:
