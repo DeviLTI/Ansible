@@ -14,9 +14,15 @@
       - name: ipaddress validation
         ansible.builtin.debug:
           ip: 400.600.659.458
-          ipp: 125.195.9.9
           msg: " The given ip address '{{ ip }}' is : {{ ip | ansible.utils.ipaddr }}"
+          
+        
+      - name: ipadrress validation2
+        ansbile.builtin.debug:
+          ipp: 125.46.8.8
           msg: " The given ip address '{{ ipp }}' is : {{ ipp | ansible.utils.ipaddr }}"
+
+
 
     # - name: transforming sting into list
     #   ansible.builtin.debug:
