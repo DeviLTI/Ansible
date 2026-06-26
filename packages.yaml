@@ -14,9 +14,9 @@
 
     - name: uninstall and installing
       ansible.builtin.package:
-        name: {{ item.name }}
-        state: {{ item.state }}
-        msg: " {{ item }} is {{ state }} "
+        name: "{{ item.name }}"
+        state: "{{ item.state }}"
+        msg: " '{{ item }}' is {{ state }} "
       loop:
         - {name: nginx, state: present}
         - {name: mysql, state: absent}
