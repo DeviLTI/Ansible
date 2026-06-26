@@ -12,8 +12,8 @@
           msg: "{{ cat |  default('omit') }}" #making varible optional
       
       - name: ipaddress validation
+        ip: 400.600.659.458
         ansible.builtin.debug:
-          ip: 400.600.659.458
           msg: " The given ip address '{{ ip }}' is : {{ ip | ansible.utils.ipaddr }}"
           
         
