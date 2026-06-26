@@ -27,9 +27,9 @@
 
 
       - name: transforming sting into list
-        ansible.builtin.debug:
         vars:
           fruits: "Apple,banana,kiwi,mango"
+        ansible.builtin.debug:
           msg: " friuts are: {{ fruits | split(',') }} "
 
     # - name: transforming map into list
