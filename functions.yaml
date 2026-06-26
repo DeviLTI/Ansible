@@ -33,10 +33,12 @@
           msg: " friuts are: {{ fruits | split(',') }} "
 
       - name: transforming map into list
-        fruits:
-           fruit1: apple
-           fruit2: banana
-           fruit3: kiwi
+        vars:
+           fruits: {
+             fruit1: apple
+             fruit2: banana
+             fruit3: kiwi
+           }
         ansible.builtin.debug:
          msg: " fruits are: {{ fruits | dict2items }}"
 
