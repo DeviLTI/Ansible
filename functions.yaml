@@ -13,12 +13,12 @@
       #  - name: Check if person is defined
       #    ansible.builtin.debug:
       #      msg: "{{ person is defined }}"
-    # - name: ipaddress validation
-    #   ansible.builtin.debug:
-    #     ip: 400.600.659.458
-    #     ipp: 125.195.9.9
-    #     msg: " The given ip address {{ ip }} is : {{ ip | ansible.utils.ipaddr }}"
-    #     msg: " The given ip address {{ ipp }} is : {{ ipp | ansible.utils.ipaddr }}"
+     - name: ipaddress validation
+       ansible.builtin.debug:
+         ip: 400.600.659.458
+         ipp: 125.195.9.9
+         msg: " The given ip address {{ ip }} is : {{ ip | ansible.utils.ipaddr }}"
+         msg: " The given ip address {{ ipp }} is : {{ ipp | ansible.utils.ipaddr }}"
 
     # - name: transforming sting into list
     #   ansible.builtin.debug:
