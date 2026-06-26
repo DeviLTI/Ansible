@@ -53,10 +53,10 @@
         vars:
           name: Devil
         ansible.builtin.debug:
-          msg: " Hello {{ name | uppercase }}"
+          msg: " Hello {{ name | upper }}"
 
       - name: lower case
         vars:
           name: SURYS
         ansible.builtin.debug:
-          msg: " Hello {{ name | lowercase }}"  
+          msg: " Hello {{ name | lower }}"  
