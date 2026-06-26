@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   tasks:
-    # - name: default variable
-    #   ansible.builtin.debug:
-    #     msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
+      - name: default variable
+        ansible.builtin.debug:
+          msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
 
     
       - name: making variable optional
@@ -26,11 +26,11 @@
 
 
 
-    # - name: transforming sting into list
-    #   ansible.builtin.debug:
-    #     vars:
-    #       fruits: "Apple,banana,kiwi,mango"
-    #     msg: " friuts are: {{ fruits | split(',') }} "
+      - name: transforming sting into list
+        ansible.builtin.debug:
+        vars:
+          fruits: "Apple,banana,kiwi,mango"
+          msg: " friuts are: {{ fruits | split(',') }} "
 
     # - name: transforming map into list
     #   ansible.builtin.debug:
