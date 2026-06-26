@@ -1,0 +1,41 @@
+- name: functions
+  host: local
+  connection: local
+  tasks:
+    - name: default variable
+      ansible.builtin.debug:
+        msg: "{{ person | default('suresh') }}" #giving default value to perosn variable
+
+    
+    - name: making variable optional
+      ansible.builtin.debug:
+        msg: "{{ person | default('devi') }}"
+        msg: "{{ person | default('omit') }}" #making varible optional
+
+    - name: ipaddress validation
+      ansible.builtin.debug:
+        ip: 400.600.659.458
+        ipp: 125.195.9.9
+        msg: " The given ip address {{ ip }} is : {{ ip | ansible.utils.ipaddr }}"
+        msg: " The given ip address {{ ipp }} is : {{ ipp | ansible.utils.ipaddr }}"
+
+    - name: transforming sting into list
+      ansible.builtin.debug:
+        vars:
+          fruits: "Apple,banana,kiwi,mango"
+        msg: " friuts are: {{ fruits | split(',') }} "
+
+    - name: transforming map into list
+      ansible.builtin.debug:
+        fruits:
+          fruit1: apple
+          fruit2: banana
+          fruit3: kiwi
+          mango
+        msg: " fruits are: {{ fruits | dict2items }}"
+
+
+    - name: transforming list into map
+      ansible.builtin.debug:
+        fruits: [fruit1: apple, fruit2: banana, fruit3: kiwi]
+        msg: " fruits are : {{ fruits | list2dict }}"
