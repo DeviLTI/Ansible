@@ -1,0 +1,24 @@
+- name: installinf packages with loop
+  host: frontend
+  become: yes
+  tasks:
+    - name: installing packages
+      ansible.builtin.package:
+        name: {{ item }}
+        state: present 
+        msg: "installing package: {{ item }}"
+      loop:
+        - nginx
+        - mysql
+        - zip
+    
+
+    #- name: uninstall and installing
+     # ansible.builtin.package:
+        #name: {{ item.name }}
+        #state: {{ item.state }}
+       # msg: " {{ item }} is {{ state }} "
+      #loop:
+        #{name: nginx, state: present}
+        #{name: mysql, state: absent}
+        #{name: zip, state: absent}
