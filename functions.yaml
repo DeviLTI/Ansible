@@ -43,7 +43,9 @@
           msg: " fruits are: {{ fruits | dict2items }}"
 
 
-    # - name: transforming list into map
-    #   ansible.builtin.debug:
-    #     fruits: [fruit1: apple, fruit2: banana, fruit3: kiwi]
-    #     msg: " fruits are : {{ fruits | list2dict }}"
+      - name: transforming list into map
+        vars:
+          fruits: [apple,banana,kiwi]
+      
+        ansible.builtin.debug:
+          msg: " fruits are : {{ fruits | list2dict }}"
