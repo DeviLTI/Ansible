@@ -45,7 +45,6 @@
 
       - name: transforming list into map
         vars:
-          fruits: [apple,banaana,kiwi,alo]
-      
+          fruits:  [{'key': 'fruit1', 'value': 'apple'}, {'key': 'fruit2', 'value': 'banana'}, {'key': 'fruit3', 'value': 'kiwi'}, {'key': 'fruit4', 'value': 'mango'}]
         ansible.builtin.debug:
           msg: " fruits are : {{ fruits | items2dict }}"
