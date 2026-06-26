@@ -48,3 +48,15 @@
           fruits:  [{'key': 'fruit1', 'value': 'apple'}, {'key': 'fruit2', 'value': 'banana'}, {'key': 'fruit3', 'value': 'kiwi'}, {'key': 'fruit4', 'value': 'mango'}]
         ansible.builtin.debug:
           msg: " fruits are : {{ fruits | items2dict }}"
+
+      - name: uppercase
+        vars:
+          name: Devil
+        ansible.builtin.debug:
+          msg: " Hello {{ name | uppercase }}"
+
+      - name: lower case
+        vars:
+          name: SURYS
+        ansible.builtin.debug:
+          msg: " Hello {{ name | lowercase }}"  
