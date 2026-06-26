@@ -36,7 +36,7 @@
         vars:
           fruits: [apple,banana.kiwi.mango]
         ansible.builtin.debug:
-          msg: " fruits are: {{ fruits | dict2items }}"
+          msg: " fruits are: '{{ fruits | dict2items }}'"
 
 
     # - name: transforming list into map
